@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guillermo Segura Gonçalves - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Teko:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --primary-color: #0d47a1;
+            /* Azul oscuro */
+            --secondary-color: #1976d2;
+            /* Azul medio */
+            --background-color: #f4f4f9;
+            --card-background: #ffffff;
+            --text-color: #333;
+            --heading-font: 'Teko', sans-serif;
+            --body-font: 'Roboto', sans-serif;
+        }
+
+        body {
+            font-family: var(--body-font);
+            margin: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* --- Encabezado --- */
+        .header {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--card-background);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-family: var(--heading-font);
+            font-size: 4rem;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        .header h2 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+
+        .header p {
+            max-width: 700px;
+            margin: 1.5rem auto 0;
+            font-size: 1.1rem;
+        }
+
+        .contact-links {
+            margin-top: 2rem;
+        }
+
+        .contact-links a {
+            color: var(--card-background);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-links a:hover {
+            opacity: 0.8;
+        }
+
+        .contact-links i {
+            /* Para iconos de Font Awesome */
+            margin-right: 8px;
+        }
+
+
+        /* --- Secciones --- */
+        .section {
+            background-color: var(--card-background);
+            margin-top: 2rem;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
+            font-family: var(--heading-font);
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 2rem;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        /* --- Experiencia y Educación --- */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background-color: var(--secondary-color);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: -2.7rem;
+            width: 15px;
+            height: 15px;
+            background-color: var(--card-background);
+            border: 3px solid var(--secondary-color);
+            border-radius: 50%;
+        }
+
+        .timeline-item h3 {
+            font-size: 1.4rem;
+            margin: 0 0 0.25rem 0;
+            color: var(--text-color);
+        }
+
+        .timeline-item p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .item-subtitle {
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem !important;
+        }
+
+        .item-date {
+            font-style: italic;
+            color: #777;
+        }
+
+        /* --- Habilidades --- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-category {
+            padding: 1.5rem;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .skill-category h4 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+
+        .skill-category ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .skill-category li {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        /* --- Footer --- */
+        .footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="header">
+            <h1>GUILLERMO SEGURA GONÇALVES</h1>
+            <h2>Estudiante de ASIR y Profesional en Transición</h2>
+            <p>
+                [cite_start]Apasionado por la administración de sistemas, virtualización y tecnologías cloud como
+                Azure[cite: 8]. [cite_start]Buscando iniciar mi carrera en el sector IT para aportar valor y crecer
+                profesionalmente[cite: 8].
+            </p>
+            <div class="contact-links">
+                <a href="mailto:guillermos625@gmail.com">📧 guillermos625@gmail.com</a>
+                <a href="https://linkedin.com/in/guillermoseguragonçalves" target="_blank">💼 LinkedIn</a>
+            </div>
+        </header>
+
+        <main>
+            <section class="section">
+                <h2 class="section-title">Experiencia Profesional</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>Técnico de Atención al Profesor</h3>
+                        <p class="item-subtitle">UNIR</p>
+                        [cite_start]<p class="item-date">2023 - Actualidad [cite: 19]</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Jefe de Tráfico</h3>
+                        <p class="item-subtitle">Transportes Garlez</p>
+                        [cite_start]<p class="item-date">2022 - 2023 [cite: 20]</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Técnico de Marketing</h3>
+                        <p class="item-subtitle">INDEX Técnicas Expansivas</p>
+                        [cite_start]<p class="item-date">2021 - 2022 [cite: 20]</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Formación Académica</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>Grado Superior en Administración de Sistemas Informáticos en Red (ASIR)</h3>
+                        <p class="item-subtitle">UNIR, Logroño</p>
+                        [cite_start]<p class="item-date">2023 - Actualidad [cite: 11]</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Grado Superior en Transporte y Logística</h3>
+                        <p class="item-subtitle">IES Viktoria Kent, Elche</p>
+                        [cite_start]<p class="item-date">2019 - 2020 [cite: 14]</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Grado Superior en Comercio Internacional</h3>
+                        <p class="item-subtitle">IES Comercio, Logroño</p>
+                        [cite_start]<p class="item-date">2017 - 2019 [cite: 15]</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Habilidades Técnicas y Competencias</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Sistemas y Cloud</h4>
+                        <ul>
+                            [cite_start]<li>Windows Server [cite: 12]</li>
+                            [cite_start]<li>Linux (Ubuntu) [cite: 12]</li>
+                            [cite_start]<li>Virtualización (VMware, VirtualBox) [cite: 13]</li>
+                            [cite_start]<li>Azure Fundamentals (En curso) [cite: 7]</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Redes</h4>
+                        <ul>
+                            [cite_start]<li>TCP/IP [cite: 13]</li>
+                            [cite_start]<li>VLANs [cite: 13]</li>
+                            [cite_start]<li>DNS, DHCP [cite: 13]</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Profesionales</h4>
+                        <ul>
+                            [cite_start]<li>Soporte y atención al cliente [cite: 22]</li>
+                            [cite_start]<li>Trabajo en equipo [cite: 30]</li>
+                            [cite_start]<li>Organización [cite: 25]</li>
+                            [cite_start]<li>Actitud proactiva [cite: 9]</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Página generada a partir de mi CV. [cite_start]Ubicación: Logroño, La Rioja[cite: 3].</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
