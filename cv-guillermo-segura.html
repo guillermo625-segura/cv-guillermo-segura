@@ -10,15 +10,19 @@
         section { background: white; margin-top: 20px; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         h2 { color: #2980b9; border-bottom: 2px solid #2980b9; padding-bottom: 5px; }
         .tech-stack { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
-        .badge { background: #ecf0f1; padding: 5px 10px; border-radius: 4px; display: inline-block; margin: 5px; border: 1px solid #bdc3c7; }
+        .badge { background: #ecf0f1; padding: 5px 10px; border-radius: 4px; display: inline-block; margin: 5px; border: 1px solid #bdc3c7; font-weight: bold; }
         .project-detail { background: #f9f9f9; padding: 15px; border-left: 4px solid #27ae60; margin-top: 10px; }
+        ul { list-style-type: none; padding-left: 0; }
+        li { margin-bottom: 15px; }
+        a { text-decoration: none; }
+        a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>Guillermo Segura Gonçalves</h1>
-    <p>Estudiante de ASIR | Futuro Administrador de Sistemas & Cloud</p>
+    <p>Estudiante de ASIR | Entusiasta de Tecnologías Cloud y Sistemas</p>
     <div class="contact-info">
         📍 Logroño, La Rioja | ☎ 608 057 217 | ✉ guillermos625@gmail.com <br>
         <a href="https://linkedin.com/in/guillermoseguragonçalves" style="color: #3498db;">LinkedIn</a> | 
@@ -28,7 +32,8 @@
 
 <section id="perfil">
     <h2>Perfil Profesional</h2>
-    <p>Estudiante de último año de <strong>ASIR en UNIR</strong>. Mi enfoque se centra en la continuidad del servicio y la administración de infraestructuras críticas. A diferencia de mi CV resumido, en este espacio detallo mi capacidad para gestionar entornos complejos donde la convergencia entre <strong>IT y OT</strong> es clave para la seguridad industrial y corporativa.</p>
+    <p>Soy <strong>estudiante de último año de ASIR en UNIR</strong> con una fuerte vocación por la tecnología y la administración de sistemas informáticos. Tras consolidar mi experiencia en soporte técnico y gestión de plataformas, he descubierto una verdadera pasión por los <strong>entornos Cloud</strong>.</p>
+    <p>Gracias al uso práctico del cloud de <strong>IONOS</strong> y a los <strong>conocimientos adquiridos en la preparación de la certificación Azure (AZ-900) y la Administración de Microsoft 365</strong>, mi objetivo es especializarme en la gestión de infraestructuras en la nube. Soy una persona proactiva y en constante aprendizaje, motivada por los retos técnicos y la optimización de servicios IT.</p>
 </section>
 
 <section id="laboratorios">
@@ -41,47 +46,72 @@
         <strong>Arquitectura Azure (Preparación AZ-900):</strong>
         <p>Estudio profundo de la infraestructura global de Microsoft Azure. Implementación teórica de modelos IaaS, PaaS y SaaS. Conocimiento en gestión de identidades (Azure AD/Entra ID) y gobernanza de costes en la nube.</p>
     </div>
-    <div class="project-detail">
-        <strong>Seguridad IT/OT:</strong>
-        <p>Formación especializada en la protección de activos industriales. Comprensión de las diferencias de seguridad entre redes corporativas tradicionales y redes de planta, aplicando normativas de ciberseguridad industrial para minimizar riesgos de parada de producción.</p>
-    </div>
 </section>
 
 <section id="competencias">
-    <h2>Stack Técnico Completo</h2>
+    <h2>Stack Técnico y Habilidades</h2>
     <div class="tech-stack">
         <div>
             <h3>Sistemas y Cloud</h3>
-            <span class="badge">Windows Server 2019/22</span>
+            <span class="badge">Windows Server</span>
             <span class="badge">Linux (Ubuntu/Debian)</span>
             <span class="badge">Cloud IONOS</span>
             <span class="badge">Azure Fundamentals</span>
-            <span class="badge">Virtualización (VMware, VirtualBox)</span>
+            <span class="badge">Virtualización</span>
         </div>
         <div>
-            <h3>Redes y Servicios</h3>
-            <span class="badge">Protocolos TCP/IP</span>
-            <span class="badge">DNS, DHCP, FTP/SFTP</span>
-            <span class="badge">Servidores de Correo (SMTP)</span>
-            <span class="badge">VLANs y Routing básico</span>
+            <h3>Redes y Seguridad</h3>
+            <span class="badge">Infraestructura de Red</span>
+            <span class="badge">Seguridad IT/OT</span>
+            <span class="badge">DNS / SMTP / FTP</span>
+            <span class="badge">Ciberseguridad Avanzada</span>
         </div>
         <div>
-            <h3>Software y Gestión</h3>
-            <span class="badge">Microsoft 365 Admin</span>
-            <span class="badge">Moodle (Admin Educativo)</span>
-            <span class="badge">WordPress (CMS)</span>
-            <span class="badge">Ciberseguridad OT</span>
+            <h3>Interpersonales</h3>
+            <span class="badge">Trabajo en Equipo</span>
+            <span class="badge">Actitud Proactiva</span>
+            <span class="badge">Capacidad de Organización</span>
         </div>
     </div>
 </section>
 
-<section id="formacion">
-    <h2>Formación y Certificaciones</h2>
+<section id="formacion-it">
+    <h2>Formación IT y Certificaciones</h2>
     <ul>
-        <li><strong>G.S. Administración de Sistemas Informáticos en Red (ASIR)</strong> - UNIR (En curso, 2º año).</li>
-        <li><strong>Certificación Ciberseguridad OT</strong> - Especialización en entornos industriales.</li>
-        <li><strong>Administración Microsoft 365</strong> - Gestión de usuarios, licencias y seguridad.</li>
-        <li><strong>Grado Superior en Transporte y Logística / Comercio Internacional</strong> - Base de gestión y organización operativa.</li>
+        <li><strong>Cloud:</strong> Fundamentos de arquitectura <strong>Azure</strong> (Preparación AZ-900) y <strong>Administración de Microsoft 365</strong>.</li>
+        <li><strong>Seguridad:</strong> Ciberseguridad Avanzada en Entornos <strong>IT/OT</strong> (Tecnologías de la Operación).</li>
+        <li><strong>E-learning:</strong> Especialista en plataformas educativas y gestión de <strong>Moodle</strong>.</li>
+    </ul>
+</section>
+
+<section id="formacion-academica">
+    <h2>Formación Académica</h2>
+    <ul>
+        <li>
+            <strong>G.S. Administración de Sistemas Informáticos en Red (ASIR)</strong><br>
+            UNIR – Logroño, La Rioja | <em>2024 – Actualidad</em>
+        </li>
+        <li>
+            <strong>G.S. Transporte y Logística</strong><br>
+            IES Viktoria Kent – Elche, Comunidad Valenciana | <em>2019 – 2020</em>
+        </li>
+        <li>
+            <strong>G.S. Comercio Internacional</strong><br>
+            IES Comercio – Logroño, La Rioja | <em>2017 – 2019</em>
+        </li>
+        <li>
+            <strong>G.M. Comercio y Marketing</strong><br>
+            IES Comercio – Logroño, La Rioja | <em>2015 – 2017</em>
+        </li>
+    </ul>
+</section>
+
+<section id="experiencia">
+    <h2>Experiencia Profesional</h2>
+    <ul>
+        <li><strong>Técnico de Atención al Profesor</strong> | UNIR | <em>2023 – Actualidad</em></li>
+        <li><strong>Jefe de Tráfico</strong> | Transportes Garlez | <em>2022 – 2023</em></li>
+        <li><strong>Técnico de Marketing</strong> | INDEX Técnicas Expansivas | <em>2021 – 2022</em></li>
     </ul>
 </section>
 
