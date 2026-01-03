@@ -1,321 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guillermo Segura Gonçalves - Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Teko:wght@700&display=swap"
-        rel="stylesheet">
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <title>Portfolio Profesional - Guillermo Segura Gonçalves</title>
     <style>
-        :root {
-            --primary-color: #0d47a1;
-            /* Azul oscuro */
-            --secondary-color: #1976d2;
-            /* Azul medio */
-            --background-color: #f4f4f9;
-            --card-background: #ffffff;
-            --text-color: #333;
-            --heading-font: 'Teko', sans-serif;
-            --body-font: 'Roboto', sans-serif;
-        }
-
-        body {
-            font-family: var(--body-font);
-            margin: 0;
-            background-color: var(--background-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
-        }
-
-        /* --- Encabezado --- */
-        .header {
-            text-align: center;
-            padding: 3rem 1rem;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: var(--card-background);
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .header h1 {
-            font-family: var(--heading-font);
-            font-size: 4rem;
-            margin: 0;
-            letter-spacing: 2px;
-        }
-
-        .header h2 {
-            font-size: 1.5rem;
-            font-weight: 300;
-            opacity: 0.9;
-            margin-top: 0.5rem;
-        }
-
-        .header p {
-            max-width: 700px;
-            margin: 1.5rem auto 0;
-            font-size: 1.1rem;
-        }
-
-        .contact-links {
-            margin-top: 2rem;
-        }
-
-        .contact-links a {
-            color: var(--card-background);
-            text-decoration: none;
-            margin: 0 1rem;
-            font-size: 1rem;
-            transition: opacity 0.3s ease;
-        }
-
-        .contact-links a:hover {
-            opacity: 0.8;
-        }
-
-        .contact-links i {
-            /* Para iconos de Font Awesome */
-            margin-right: 8px;
-        }
-
-
-        /* --- Secciones --- */
-        .section {
-            background-color: var(--card-background);
-            margin-top: 2rem;
-            padding: 2.5rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .section-title {
-            font-family: var(--heading-font);
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-top: 0;
-            margin-bottom: 2rem;
-            text-align: center;
-            letter-spacing: 1px;
-        }
-
-        /* --- Experiencia y Educación --- */
-        .timeline {
-            position: relative;
-            padding-left: 2rem;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 3px;
-            height: 100%;
-            background-color: var(--secondary-color);
-            border-radius: 2px;
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 2.5rem;
-        }
-
-        .timeline-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            top: 5px;
-            left: -2.7rem;
-            width: 15px;
-            height: 15px;
-            background-color: var(--card-background);
-            border: 3px solid var(--secondary-color);
-            border-radius: 50%;
-        }
-
-        .timeline-item h3 {
-            font-size: 1.4rem;
-            margin: 0 0 0.25rem 0;
-            color: var(--text-color);
-        }
-
-        .timeline-item p {
-            margin: 0;
-            font-size: 1rem;
-        }
-
-        .item-subtitle {
-            font-weight: 700;
-            color: var(--secondary-color);
-            margin-bottom: 0.5rem !important;
-        }
-
-        .item-date {
-            font-style: italic;
-            color: #777;
-        }
-
-        /* --- Habilidades --- */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .skill-category {
-            padding: 1.5rem;
-            border: 1px solid #eee;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        .skill-category h4 {
-            margin-top: 0;
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-            color: var(--primary-color);
-        }
-
-        .skill-category ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .skill-category li {
-            margin-bottom: 0.5rem;
-            font-size: 1rem;
-        }
-
-        /* --- Footer --- */
-        .footer {
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 2rem;
-            font-size: 0.9rem;
-            color: #777;
-        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: auto; padding: 20px; background-color: #f4f4f4; }
+        header { background: #2c3e50; color: white; padding: 2rem; border-radius: 8px; text-align: center; }
+        .contact-info { margin-top: 10px; font-size: 0.9em; }
+        section { background: white; margin-top: 20px; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h2 { color: #2980b9; border-bottom: 2px solid #2980b9; padding-bottom: 5px; }
+        .tech-stack { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+        .badge { background: #ecf0f1; padding: 5px 10px; border-radius: 4px; display: inline-block; margin: 5px; border: 1px solid #bdc3c7; }
+        .project-detail { background: #f9f9f9; padding: 15px; border-left: 4px solid #27ae60; margin-top: 10px; }
     </style>
 </head>
-
 <body>
 
-    <div class="container">
-        <header class="header">
-            <h1>GUILLERMO SEGURA GONÇALVES</h1>
-            <h2>Estudiante de ASIR y Profesional IT en Transición</h2>
-            <p>
-                Técnico en formación especializado en Administración de Sistemas, con experiencia previa en entornos
-                profesionales, actualmente estoy cursando 2º y último año de ASIR en Unir, y me encuentro preparando la
-                certificación Azure Fundamentals (AZ-900).
-            </p>
-
-            <p> Apasionado por la administración de sistemas Windows, virtualización y tecnologías cloud, busco una
-                oportunidad laboral para iniciarme en el sector IT, aportar desde el primer día y seguir creciendo
-                profesionalmente. Destaco por mi actitud proactiva, constancia en los objetivos propuestos y promover un
-                buen ambiente laboral.
-            </p>
-            <div class="contact-links">
-                <a href="mailto:guillermos625@gmail.com">📧 guillermos625@gmail.com</a>
-                <a href="tel:600123123">📞 608 057 217</a>
-                <a href="https://linkedin.com/in/guillermoseguragonçalves" target="_blank">💼 LinkedIn</a>
-            </div>
-        </header>
-
-        <main>
-            <section class="section">
-                <h2 class="section-title">Experiencia Profesional</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <h3>Técnico de Atención al Profesor</h3>
-                        <p class="item-subtitle">UNIR - Logroño, La Rioja</p>
-                        <p class="item-date">2023 - Actualidad </p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>Jefe de Tráfico</h3>
-                        <p class="item-subtitle">Transportes Garlez - Logroño, La Rioja</p>
-                        <p class="item-date">2022 - 2023</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>Técnico de Marketing</h3>
-                        <p class="item-subtitle">INDEX Técnicas Expansivas - Logroño, La Rioja</p>
-                        <p class="item-date">2021 - 2022</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section">
-                <h2 class="section-title">Formación Académica</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <h3>Grado Superior en Administración de Sistemas Informáticos en Red (ASIR)</h3>
-                        <p class="item-subtitle">UNIR, Logroño</p>
-                        <p class="item-date">2023 - Actualidad</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>Grado Superior en Transporte y Logística</h3>
-                        <p class="item-subtitle">IES Viktoria Kent, Elche</p>
-                        <p class="item-date">2019 - 2020</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>Grado Superior en Comercio Internacional</h3>
-                        <p class="item-subtitle">IES Comercio, Logroño</p>
-                        <p class="item-date">2017 - 2019</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section">
-                <h2 class="section-title">Habilidades Técnicas y Competencias</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h4>Sistemas y Cloud</h4>
-                        <ul>
-                            <li>Windows Server</li>
-                            <li>Virtualización (VMware, VirtualBox)</li>
-                            <li>Azure Fundamentals (En curso)</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Redes</h4>
-                        <ul>
-                            <li>TCP/IP</li>
-                            <li>VLANs</li>
-                            <li>DNS, DHCP</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Profesionales</h4>
-                        <ul>
-                            <li>Soporte y atención al cliente</li>
-                            <li>Trabajo en equipo</li>
-                            <li>Organización</li>
-                            <li>Actitud proactiva</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <p>Página generada a partir de mi CV. Ubicación: Logroño, La Rioja.</p>
-        </footer>
-
+<header>
+    <h1>Guillermo Segura Gonçalves</h1>
+    <p>Estudiante de ASIR | Futuro Administrador de Sistemas & Cloud</p>
+    <div class="contact-info">
+        📍 Logroño, La Rioja | ☎ 608 057 217 | ✉ guillermos625@gmail.com <br>
+        <a href="https://linkedin.com/in/guillermoseguragonçalves" style="color: #3498db;">LinkedIn</a> | 
+        <a href="https://github.com/guillermo625-segura" style="color: #3498db;">GitHub</a>
     </div>
+</header>
+
+<section id="perfil">
+    <h2>Perfil Profesional</h2>
+    <p>Estudiante de último año de <strong>ASIR en UNIR</strong>. Mi enfoque se centra en la continuidad del servicio y la administración de infraestructuras críticas. A diferencia de mi CV resumido, en este espacio detallo mi capacidad para gestionar entornos complejos donde la convergencia entre <strong>IT y OT</strong> es clave para la seguridad industrial y corporativa.</p>
+</section>
+
+<section id="laboratorios">
+    <h2>Laboratorios y Proyectos Técnicos (Detalle Extendido)</h2>
+    <div class="project-detail">
+        <strong>Infraestructura Cloud en IONOS:</strong>
+        <p>Despliegue y administración de servidores virtuales (VPS) y Cloud Servers. Configuración de servicios esenciales como DNS gestionado, servidores de correo (SMTP/IMAP) y protocolos de transferencia segura (SFTP). Uso este entorno para pruebas de carga y despliegue de aplicaciones web bajo entornos Linux.</p>
+    </div>
+    <div class="project-detail">
+        <strong>Arquitectura Azure (Preparación AZ-900):</strong>
+        <p>Estudio profundo de la infraestructura global de Microsoft Azure. Implementación teórica de modelos IaaS, PaaS y SaaS. Conocimiento en gestión de identidades (Azure AD/Entra ID) y gobernanza de costes en la nube.</p>
+    </div>
+    <div class="project-detail">
+        <strong>Seguridad IT/OT:</strong>
+        <p>Formación especializada en la protección de activos industriales. Comprensión de las diferencias de seguridad entre redes corporativas tradicionales y redes de planta, aplicando normativas de ciberseguridad industrial para minimizar riesgos de parada de producción.</p>
+    </div>
+</section>
+
+<section id="competencias">
+    <h2>Stack Técnico Completo</h2>
+    <div class="tech-stack">
+        <div>
+            <h3>Sistemas y Cloud</h3>
+            <span class="badge">Windows Server 2019/22</span>
+            <span class="badge">Linux (Ubuntu/Debian)</span>
+            <span class="badge">Cloud IONOS</span>
+            <span class="badge">Azure Fundamentals</span>
+            <span class="badge">Virtualización (VMware, VirtualBox)</span>
+        </div>
+        <div>
+            <h3>Redes y Servicios</h3>
+            <span class="badge">Protocolos TCP/IP</span>
+            <span class="badge">DNS, DHCP, FTP/SFTP</span>
+            <span class="badge">Servidores de Correo (SMTP)</span>
+            <span class="badge">VLANs y Routing básico</span>
+        </div>
+        <div>
+            <h3>Software y Gestión</h3>
+            <span class="badge">Microsoft 365 Admin</span>
+            <span class="badge">Moodle (Admin Educativo)</span>
+            <span class="badge">WordPress (CMS)</span>
+            <span class="badge">Ciberseguridad OT</span>
+        </div>
+    </div>
+</section>
+
+<section id="formacion">
+    <h2>Formación y Certificaciones</h2>
+    <ul>
+        <li><strong>G.S. Administración de Sistemas Informáticos en Red (ASIR)</strong> - UNIR (En curso, 2º año).</li>
+        <li><strong>Certificación Ciberseguridad OT</strong> - Especialización en entornos industriales.</li>
+        <li><strong>Administración Microsoft 365</strong> - Gestión de usuarios, licencias y seguridad.</li>
+        <li><strong>Grado Superior en Transporte y Logística / Comercio Internacional</strong> - Base de gestión y organización operativa.</li>
+    </ul>
+</section>
 
 </body>
-
 </html>
