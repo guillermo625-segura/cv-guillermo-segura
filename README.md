@@ -4,6 +4,7 @@ Bienvenido a mi currículum en formato web.
 
 🔗 Puedes verlo online aquí:  
 https://guillermo625-segura.github.io/cv-guillermo-segura/cv-guillermo-segura.html
+cv-guillermo-segura.html
 
 ## Tecnologías
 - HTML5
