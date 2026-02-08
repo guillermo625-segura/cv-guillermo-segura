@@ -9,20 +9,24 @@
         .contact-info { margin-top: 10px; font-size: 0.9em; }
         section { background: white; margin-top: 20px; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         h2 { color: #2980b9; border-bottom: 2px solid #2980b9; padding-bottom: 5px; }
+        h3 { color: #34495e; margin-bottom: 5px; }
         .tech-stack { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
-        .badge { background: #ecf0f1; padding: 5px 10px; border-radius: 4px; display: inline-block; margin: 5px; border: 1px solid #bdc3c7; font-weight: bold; }
+        .badge { background: #ecf0f1; padding: 5px 10px; border-radius: 4px; display: inline-block; margin: 5px; border: 1px solid #bdc3c7; font-weight: bold; font-size: 0.85em; }
         .project-detail { background: #f9f9f9; padding: 15px; border-left: 4px solid #27ae60; margin-top: 10px; }
-        ul { list-style-type: none; padding-left: 0; }
-        li { margin-bottom: 15px; }
+        .job-item { margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+        .job-item:last-child { border-bottom: none; }
+        ul { list-style-type: disc; padding-left: 20px; }
+        li { margin-bottom: 8px; }
         a { text-decoration: none; }
         a:hover { text-decoration: underline; }
+        .date { color: #7f8c8d; font-style: italic; font-size: 0.9em; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>Guillermo Segura Gonçalves</h1>
-    <p>Estudiante de ASIR | Entusiasta de Tecnologías Cloud y Sistemas</p>
+    <p>Administrador de Sistemas IT | Especialista en Soporte y Entornos Cloud</p>
     <div class="contact-info">
         📍 Logroño, La Rioja | ☎ 608 057 217 | ✉ guillermos625@gmail.com <br>
         <a href="https://linkedin.com/in/guillermoseguragonçalves" style="color: #3498db;">LinkedIn</a> | 
@@ -32,86 +36,87 @@
 
 <section id="perfil">
     <h2>Perfil Profesional</h2>
-    <p>Soy <strong>estudiante de último año de ASIR en UNIR</strong> con una fuerte vocación por la tecnología y la administración de sistemas informáticos. Tras consolidar mi experiencia en soporte técnico y gestión de plataformas, he descubierto una verdadera pasión por los <strong>entornos Cloud</strong>.</p>
-    <p>Gracias al uso práctico del cloud de <strong>IONOS</strong> y a los <strong>conocimientos adquiridos en la preparación de la certificación Azure (AZ-900) y la Administración de Microsoft 365</strong>, mi objetivo es especializarme en la gestión de infraestructuras en la nube. Soy una persona proactiva y en constante aprendizaje, motivada por los retos técnicos y la optimización de servicios IT.</p>
+    <p>Profesional con sólida trayectoria en gestión operativa y trato directo al usuario, actualmente especializado en <strong>Administración de Sistemas (ASIR)</strong>. Cuento con experiencia técnica en soporte helpdesk, administración de <strong>Microsoft 365, Active Directory y virtualización</strong>.</p>
+    <p>Mi trayectoria previa como Jefe de Tráfico me aporta una alta capacidad para la <strong>resolución de incidencias bajo presión</strong> y organización de activos. Combino dotes comunicativas con un enfoque resolutivo, buscando aportar estabilidad y compromiso en entornos tecnológicos de largo recorrido.</p>
 </section>
 
-<section id="laboratorios">
-    <h2>Laboratorios y Proyectos Técnicos (Detalle Extendido)</h2>
-    <div class="project-detail">
-        <strong>Infraestructura Cloud en IONOS:</strong>
-        <p>Despliegue y administración de servidores virtuales (VPS) y Cloud Servers. Configuración de servicios esenciales como DNS gestionado, servidores de correo (SMTP/IMAP) y protocolos de transferencia segura (SFTP). Uso este entorno para pruebas de carga y despliegue de aplicaciones web bajo entornos Linux.</p>
+<section id="experiencia">
+    <h2>Experiencia Profesional</h2>
+    
+    <div class="job-item">
+        <h3>Técnico de Sistemas IT (FCT) - Encore Lab</h3>
+        <span class="date">2026 – Actualidad</span>
+        <ul>
+            <li><strong>Administración de Sistemas:</strong> Gestión de usuarios y permisos en Active Directory y Entra ID.</li>
+            <li><strong>Soporte y Resolución de Incidencias:</strong> Helpdesk nivel 1 y 2, soporte técnico hardware/software presencial y remoto.</li>
+            <li><strong>Mantenimiento de Infraestructura:</strong> Sustitución de componentes, configuración de periféricos e inventariado de activos IT.</li>
+            <li><strong>Redes:</strong> Configuración de VPNs, despliegue de software corporativo y automatización básica mediante scripts.</li>
+        </ul>
     </div>
-    <div class="project-detail">
-        <strong>Arquitectura Azure (Preparación AZ-900):</strong>
-        <p>Estudio profundo de la infraestructura global de Microsoft Azure. Implementación teórica de modelos IaaS, PaaS y SaaS. Conocimiento en gestión de identidades (Azure AD/Entra ID) y gobernanza de costes en la nube.</p>
-    </div>
-</section>
 
-<section id="competencias">
-    <h2>Stack Técnico y Habilidades</h2>
-    <div class="tech-stack">
-        <div>
-            <h3>Sistemas y Cloud</h3>
-            <span class="badge">Windows Server</span>
-            <span class="badge">Linux (Ubuntu/Debian)</span>
-            <span class="badge">Cloud IONOS</span>
-            <span class="badge">Azure Fundamentals</span>
-            <span class="badge">Virtualización</span>
-        </div>
-        <div>
-            <h3>Redes y Seguridad</h3>
-            <span class="badge">Infraestructura de Red</span>
-            <span class="badge">Seguridad IT/OT</span>
-            <span class="badge">DNS / SMTP / FTP</span>
-            <span class="badge">Ciberseguridad Avanzada</span>
-        </div>
-        <div>
-            <h3>Interpersonales</h3>
-            <span class="badge">Trabajo en Equipo</span>
-            <span class="badge">Actitud Proactiva</span>
-            <span class="badge">Capacidad de Organización</span>
-        </div>
+    <div class="job-item">
+        <h3>Técnico de Atención al Profesor - UNIR</h3>
+        <span class="date">2023 – Actualidad</span>
+        <ul>
+            <li>Soporte técnico integral y resolución de incidencias en plataformas educativas.</li>
+            <li>Gestión de identidades y soporte en herramientas de la suite Microsoft 365.</li>
+        </ul>
+    </div>
+
+    <div class="job-item">
+        <h3>Jefe de Tráfico - Transportes Garlez</h3>
+        <span class="date">2022 – 2023</span>
+        <ul>
+            <li>Coordinación logística y resolución de incidencias operativas bajo entornos de alta presión.</li>
+            <li>Gestión de recursos y comunicación directa con clientes y equipos de trabajo.</li>
+        </ul>
     </div>
 </section>
 
 <section id="formacion-it">
-    <h2>Formación IT y Certificaciones</h2>
-    <ul>
-        <li><strong>Cloud:</strong> Fundamentos de arquitectura <strong>Azure</strong> (Preparación AZ-900) y <strong>Administración de Microsoft 365</strong>.</li>
-        <li><strong>Seguridad:</strong> Ciberseguridad Avanzada en Entornos <strong>IT/OT</strong> (Tecnologías de la Operación).</li>
-        <li><strong>E-learning:</strong> Especialista en plataformas educativas y gestión de <strong>Moodle</strong>.</li>
-    </ul>
+    <h2>Formación Especializada</h2>
+    <div class="project-detail">
+        <strong>Administración de Sistemas (ASIR):</strong> Gestión de sistemas Windows/Linux, virtualización y servicios de red con VPN. Administración de Active Directory y EntraID.
+    </div>
+    <div class="project-detail">
+        <strong>Ciberseguridad OT:</strong> Protección de infraestructuras críticas y sistemas industriales. Detección de vulnerabilidades y respuesta ante incidentes en redes complejas.
+    </div>
+    <div class="project-detail">
+        <strong>Microsoft Azure AZ-900:</strong> Conceptos cloud, arquitectura y servicios de Azure. Gestión de soluciones en la nube, seguridad de red y gobernanza.
+    </div>
+    <div class="project-detail">
+        <strong>Administración Microsoft 365:</strong> Gestión de identidades y licencias. Especialización en políticas de seguridad, protección de datos y cumplimiento.
+    </div>
+</section>
+
+<section id="competencias">
+    <h2>Stack Técnico</h2>
+    <div class="tech-stack">
+        <div>
+            <h3>Sistemas y Cloud</h3>
+            <span class="badge">Active Directory / Entra ID</span>
+            <span class="badge">Windows Server / Linux</span>
+            <span class="badge">VMware / VirtualBox</span>
+            <span class="badge">Azure Fundamentals</span>
+            <span class="badge">Microsoft 365 Admin</span>
+        </div>
+        <div>
+            <h3>Soporte y Redes</h3>
+            <span class="badge">Jira / Ticketing</span>
+            <span class="badge">VPN / TCP-IP</span>
+            <span class="badge">Hardware Troubleshooting</span>
+            <span class="badge">Seguridad IT/OT</span>
+            <span class="badge">Backup & Recovery</span>
+        </div>
+    </div>
 </section>
 
 <section id="formacion-academica">
     <h2>Formación Académica</h2>
     <ul>
-        <li>
-            <strong>G.S. Administración de Sistemas Informáticos en Red (ASIR)</strong><br>
-            UNIR – Logroño, La Rioja | <em>2024 – Actualidad</em>
-        </li>
-        <li>
-            <strong>G.S. Transporte y Logística</strong><br>
-            IES Viktoria Kent – Elche, Comunidad Valenciana | <em>2019 – 2020</em>
-        </li>
-        <li>
-            <strong>G.S. Comercio Internacional</strong><br>
-            IES Comercio – Logroño, La Rioja | <em>2017 – 2019</em>
-        </li>
-        <li>
-            <strong>G.M. Comercio y Marketing</strong><br>
-            IES Comercio – Logroño, La Rioja | <em>2015 – 2017</em>
-        </li>
-    </ul>
-</section>
-
-<section id="experiencia">
-    <h2>Experiencia Profesional</h2>
-    <ul>
-        <li><strong>Técnico de Atención al Profesor</strong> | UNIR | <em>2023 – Actualidad</em></li>
-        <li><strong>Jefe de Tráfico</strong> | Transportes Garlez | <em>2022 – 2023</em></li>
-        <li><strong>Técnico de Marketing</strong> | INDEX Técnicas Expansivas | <em>2021 – 2022</em></li>
+        <li><strong>G.S. Administración de Sistemas Informáticos en Red (ASIR)</strong> | UNIR | <em>En curso</em></li>
+        <li><strong>G.S. Transporte y Logística</strong> | IES Viktoria Kent | <em>2020</em></li>
+        <li><strong>G.S. Comercio Internacional</strong> | IES Comercio | <em>2019</em></li>
     </ul>
 </section>
 
