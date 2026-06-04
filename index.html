@@ -1,421 +1,592 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Guillermo Segura Gonçalves – SysAdmin IT</title>
-    <style>
-        :root {
-            --navy:   #1e3a5f;
-            --blue:   #1f5c99;
-            --accent: #10a37f;
-            --light:  #eaf2fb;
-            --bg:     #f4f7fb;
-            --white:  #ffffff;
-            --dark:   #1a1a1a;
-            --gray:   #5a6a7a;
-            --silver: #cbd5e1;
-            --card-shadow: 0 2px 12px rgba(30,58,95,0.10);
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Guillermo Segura Gonçalves – SysAdmin IT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+:root{
+  --bg:#080b10;
+  --s1:#0f1318;
+  --s2:#161b24;
+  --s3:#1d2433;
+  --border:rgba(255,255,255,0.06);
+  --border2:rgba(255,255,255,0.11);
+  --text:#dde3ee;
+  --muted:#5a6478;
+  --muted2:#8895a7;
+  --blue:#63b3ed;
+  --green:#68d391;
+  --amber:#f6ad55;
+  --red:#fc8181;
+  --purple:#b794f4;
+  --mono:'IBM Plex Mono',monospace;
+  --display:'Syne',sans-serif;
+}
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg);
-            color: var(--dark);
-            line-height: 1.65;
-        }
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--mono);font-size:14px;line-height:1.7;min-height:100vh}
 
-        a { color: var(--blue); text-decoration: none; }
-        a:hover { text-decoration: underline; }
+/* NAV */
+nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(8,11,16,0.85);backdrop-filter:blur(12px);
+  border-bottom:0.5px solid var(--border);
+  padding:0 2rem;
+  display:flex;align-items:center;justify-content:space-between;height:52px;
+}
+.nav-logo{font-family:var(--display);font-weight:800;font-size:15px;color:#fff;letter-spacing:-0.01em}
+.nav-logo span{color:var(--blue)}
+.nav-links{display:flex;gap:1.5rem}
+.nav-links a{font-size:12px;color:var(--muted2);text-decoration:none;letter-spacing:0.05em;transition:color 0.15s}
+.nav-links a:hover{color:var(--blue)}
 
-        /* ── HEADER ──────────────────────────────────────────── */
-        header {
-            background: var(--navy);
-            color: white;
-            padding: 3rem 2rem 2.5rem;
-            text-align: center;
-        }
-        header h1 { font-size: 2.2rem; margin-bottom: 0.3rem; }
-        header .subtitle {
-            font-family: 'Consolas', monospace;
-            color: #10d9a0;
-            font-size: 1rem;
-            margin-bottom: 0.8rem;
-        }
-        header .tagline { color: var(--silver); font-size: 0.95rem; margin-bottom: 1.2rem; }
-        header .contact-info { font-size: 0.9rem; color: #7ec8e3; }
-        header .contact-info a { color: #7ec8e3; }
-        header .contact-info span { margin: 0 0.5rem; color: #475569; }
+/* LAYOUT */
+.page{max-width:960px;margin:0 auto;padding:0 1.5rem 6rem}
 
-        /* ── LAYOUT ──────────────────────────────────────────── */
-        .container { max-width: 960px; margin: 0 auto; padding: 0 1.5rem 3rem; }
+/* SECTIONS */
+section{padding:4rem 0 0}
+.sec-label{font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue);opacity:0.75;margin-bottom:0.5rem}
+.sec-label::before{content:'// '}
+.sec-title{font-family:var(--display);font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;color:#fff;letter-spacing:-0.02em;line-height:1.1;margin-bottom:1.5rem}
 
-        section {
-            background: var(--white);
-            margin-top: 2rem;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: var(--card-shadow);
-        }
+/* ── HERO ── */
+#hero{padding-top:5rem;padding-bottom:2rem;border-bottom:0.5px solid var(--border)}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:11px;letter-spacing:0.1em;text-transform:uppercase;
+  background:rgba(99,179,237,0.08);border:0.5px solid rgba(99,179,237,0.2);
+  color:var(--blue);padding:4px 12px;border-radius:20px;margin-bottom:1.25rem;
+}
+.hero-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--blue);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+.hero-name{font-family:var(--display);font-size:clamp(2.2rem,6vw,3.8rem);font-weight:800;color:#fff;letter-spacing:-0.03em;line-height:1.05;margin-bottom:0.5rem}
+.hero-name span{color:var(--blue)}
+.hero-role{font-size:14px;color:var(--muted2);margin-bottom:1.75rem}
+.hero-bio{
+  max-width:620px;font-size:13.5px;line-height:1.8;color:#a0aec0;
+  border-left:2px solid var(--blue);padding-left:1.1rem;margin-bottom:2rem;
+  opacity:0.9;
+}
+.hero-contacts{display:flex;flex-wrap:wrap;gap:0.6rem;margin-bottom:2rem}
+.contact-pill{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:12px;padding:5px 12px;border-radius:6px;
+  background:var(--s1);border:0.5px solid var(--border2);color:var(--muted2);
+  text-decoration:none;transition:border-color 0.15s,color 0.15s;
+}
+.contact-pill:hover{border-color:var(--blue);color:var(--blue)}
+.contact-pill .dot{width:5px;height:5px;border-radius:50%;background:currentColor;opacity:0.5}
 
-        h2 {
-            color: var(--navy);
-            font-size: 1.3rem;
-            border-bottom: 3px solid var(--blue);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.4rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
+/* ── PROJECTS GRID ── */
+.proj-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:1rem;
+}
+@media(max-width:640px){.proj-grid{grid-template-columns:1fr}}
 
-        h3 { color: var(--blue); margin-bottom: 0.3rem; font-size: 1.05rem; }
+/* CARD — uniforme, altura igual por fila */
+.card{
+  background:var(--s1);
+  border:0.5px solid var(--border);
+  border-radius:12px;overflow:hidden;
+  display:flex;flex-direction:column;
+  transition:border-color 0.2s,transform 0.2s;
+  animation:fadeUp 0.5s ease both;
+}
+.card:hover{border-color:var(--border2);transform:translateY(-2px)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.card:nth-child(1){animation-delay:.05s}.card:nth-child(2){animation-delay:.1s}
+.card:nth-child(3){animation-delay:.15s}.card:nth-child(4){animation-delay:.2s}
+.card:nth-child(5){animation-delay:.25s}.card:nth-child(6){animation-delay:.3s}
+.card:nth-child(7){animation-delay:.35s}
 
-        /* ── PERFIL ──────────────────────────────────────────── */
-        .perfil-text p { margin-bottom: 0.8rem; color: #2d3748; }
+/* accent bar */
+.card-bar{height:2px;width:100%;flex-shrink:0}
+.bar-blue{background:linear-gradient(90deg,#63b3ed,#4299e1)}
+.bar-green{background:linear-gradient(90deg,#68d391,#48bb78)}
+.bar-amber{background:linear-gradient(90deg,#f6ad55,#ed8936)}
+.bar-red{background:linear-gradient(90deg,#fc8181,#e53e3e)}
+.bar-purple{background:linear-gradient(90deg,#b794f4,#9f7aea)}
 
-        /* ── EXPERIENCIA ─────────────────────────────────────── */
-        .job-item {
-            border-left: 4px solid var(--blue);
-            padding: 1rem 1.2rem;
-            margin-bottom: 1.4rem;
-            background: var(--light);
-            border-radius: 0 8px 8px 0;
-        }
-        .job-item:last-child { margin-bottom: 0; }
-        .job-meta { color: var(--gray); font-size: 0.88rem; font-style: italic; margin-bottom: 0.6rem; }
-        .job-item ul { padding-left: 1.2rem; margin-top: 0.4rem; }
-        .job-item li { margin-bottom: 0.5rem; font-size: 0.95rem; }
+.card-body{padding:1.25rem 1.4rem 1.4rem;display:flex;flex-direction:column;flex:1;gap:0.9rem}
 
-        /* ── PROYECTOS ───────────────────────────────────────── */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.2rem;
-        }
+/* card header */
+.card-head{display:flex;align-items:flex-start;gap:10px}
+.card-ico{
+  width:36px;height:36px;border-radius:8px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;font-size:16px;margin-top:1px;
+}
+.ico-blue{background:rgba(99,179,237,0.1);color:var(--blue)}
+.ico-green{background:rgba(104,211,145,0.1);color:var(--green)}
+.ico-amber{background:rgba(246,173,85,0.1);color:var(--amber)}
+.ico-red{background:rgba(252,129,129,0.1);color:var(--red)}
+.ico-purple{background:rgba(183,148,244,0.1);color:var(--purple)}
 
-        .project-card {
-            border: 1px solid #dde6f0;
-            border-radius: 10px;
-            padding: 1.3rem;
-            background: var(--white);
-            transition: box-shadow 0.2s;
-            position: relative;
-        }
-        .project-card:hover { box-shadow: 0 6px 20px rgba(30,58,95,0.15); }
-        .project-card .card-icon { font-size: 1.8rem; margin-bottom: 0.6rem; }
-        .project-card h3 { color: var(--navy); font-size: 1rem; margin-bottom: 0.4rem; }
-        .project-card p { font-size: 0.9rem; color: var(--gray); margin-bottom: 0.8rem; }
+.card-head-text{flex:1}
+.card-badge{
+  display:inline-block;font-size:10px;font-weight:500;letter-spacing:0.08em;
+  text-transform:uppercase;padding:2px 7px;border-radius:20px;margin-bottom:5px;
+}
+.badge-prod{background:rgba(104,211,145,0.1);color:var(--green);border:0.5px solid rgba(104,211,145,0.2)}
+.badge-lab{background:rgba(99,179,237,0.08);color:var(--blue);border:0.5px solid rgba(99,179,237,0.18)}
+.badge-ai{background:rgba(183,148,244,0.08);color:var(--purple);border:0.5px solid rgba(183,148,244,0.18)}
+.badge-corp{background:rgba(246,173,85,0.08);color:var(--amber);border:0.5px solid rgba(246,173,85,0.18)}
 
-        .tag-list { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem; }
-        .tag {
-            background: var(--light);
-            color: var(--blue);
-            border: 1px solid #b8d4ee;
-            padding: 2px 9px;
-            border-radius: 20px;
-            font-size: 0.78rem;
-            font-weight: 600;
-        }
+.card-title{font-family:var(--display);font-size:0.95rem;font-weight:700;color:#fff;line-height:1.3}
 
-        .challenge-list { margin-top: 0.8rem; padding-left: 1.1rem; }
-        .challenge-list li { font-size: 0.88rem; color: #2d3748; margin-bottom: 0.4rem; }
+/* situation */
+.situation{
+  background:var(--s2);border-left:2px solid rgba(252,129,129,0.5);
+  border-radius:0 6px 6px 0;padding:0.55rem 0.9rem;
+  font-size:12.5px;color:#9aacbc;line-height:1.6;
+}
+.situation .lbl{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--red);opacity:0.8;margin-bottom:2px}
 
-        .badge-new {
-            position: absolute; top: 1rem; right: 1rem;
-            background: var(--accent); color: white;
-            font-size: 0.7rem; font-weight: bold;
-            padding: 2px 8px; border-radius: 20px;
-            text-transform: uppercase;
-        }
+/* actions */
+.actions{display:flex;flex-direction:column;gap:0;flex:1}
+.action-item{
+  display:flex;align-items:baseline;gap:8px;
+  padding:0.3rem 0;border-bottom:0.5px solid var(--border);
+  font-size:12.5px;color:#8895a7;line-height:1.5;
+}
+.action-item:last-child{border-bottom:none}
+.action-item::before{content:'▸';color:var(--blue);font-size:9px;flex-shrink:0;margin-top:4px}
+.action-item strong{color:var(--text);font-weight:500}
 
-        /* ── FORMACIÓN ───────────────────────────────────────── */
-        .edu-featured {
-            border-left: 6px solid var(--blue);
-            background: var(--light);
-            padding: 1rem 1.3rem;
-            border-radius: 0 8px 8px 0;
-            margin-bottom: 1.2rem;
-        }
-        .edu-featured h3 { color: var(--navy); font-size: 1.1rem; }
-        .edu-featured .badge-curso {
-            display: inline-block;
-            background: var(--blue); color: white;
-            font-size: 0.72rem; font-weight: bold;
-            padding: 2px 8px; border-radius: 4px;
-            margin-left: 0.5rem; vertical-align: middle;
-        }
-        .edu-featured .edu-detail { color: var(--gray); font-size: 0.9rem; margin-top: 0.4rem; }
-        .edu-featured ul { padding-left: 1.2rem; margin-top: 0.5rem; }
-        .edu-featured li { font-size: 0.9rem; color: #2d3748; margin-bottom: 0.3rem; }
+/* result */
+.result{
+  background:rgba(104,211,145,0.05);border:0.5px solid rgba(104,211,145,0.15);
+  border-radius:6px;padding:0.55rem 0.9rem;
+  font-size:12.5px;color:var(--green);line-height:1.5;
+}
+.result .lbl{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;opacity:0.65;margin-bottom:2px}
 
-        .edu-other { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.8rem; margin-top: 1rem; }
-        .edu-item {
-            background: #f8fafc;
-            border: 1px solid #dde6f0;
-            border-radius: 8px;
-            padding: 0.8rem 1rem;
-            font-size: 0.9rem;
-        }
-        .edu-item strong { color: var(--navy); display: block; margin-bottom: 0.2rem; }
-        .edu-item span { color: var(--gray); font-size: 0.83rem; }
+/* tags */
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto}
+.tag{
+  font-size:11px;padding:2px 8px;border-radius:4px;
+  background:var(--s2);color:var(--muted);border:0.5px solid var(--border);
+}
 
-        /* ── SKILLS ──────────────────────────────────────────── */
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.2rem; }
-        .skill-group h3 { font-size: 0.95rem; margin-bottom: 0.6rem; color: var(--navy); border-bottom: 2px solid var(--light); padding-bottom: 0.3rem; }
-        .badge {
-            background: var(--light);
-            color: var(--blue);
-            border: 1px solid #b8d4ee;
-            padding: 3px 10px;
-            border-radius: 4px;
-            display: inline-block;
-            margin: 3px;
-            font-size: 0.82rem;
-            font-weight: 600;
-        }
+/* ── STACK ── */
+.stack-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0.75rem}
+.stack-card{
+  background:var(--s1);border:0.5px solid var(--border);border-radius:10px;
+  padding:1.1rem 1.25rem;
+}
+.stack-cat{font-size:10.5px;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.75rem;font-weight:500}
+.cat-blue{color:var(--blue)}.cat-green{color:var(--green)}.cat-amber{color:var(--amber)}.cat-red{color:var(--red)}.cat-purple{color:var(--purple)}
+.stack-items{display:flex;flex-direction:column;gap:5px}
+.stack-item{display:flex;align-items:center;gap:8px;font-size:12.5px;color:#9aacbc}
+.stack-item::before{content:'';width:4px;height:4px;border-radius:50%;background:currentColor;flex-shrink:0;opacity:0.5}
 
-        /* ── FOOTER ──────────────────────────────────────────── */
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            color: var(--gray);
-            font-size: 0.85rem;
-            margin-top: 2rem;
-        }
-    </style>
+/* ── CERTS ── */
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0.6rem}
+.cert-card{
+  display:flex;align-items:center;gap:10px;
+  background:var(--s1);border:0.5px solid var(--border);border-radius:8px;
+  padding:0.65rem 1rem;
+}
+.cert-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.cert-text{flex:1;font-size:12.5px;color:var(--text)}
+.cert-year{font-size:11px;color:var(--muted)}
+
+/* FOOTER */
+footer{
+  border-top:0.5px solid var(--border);margin-top:5rem;
+  padding:2rem 0;text-align:center;
+  font-size:12px;color:var(--muted);
+}
+footer span{color:var(--blue)}
+</style>
 </head>
 <body>
 
-<!-- ════════════════════════════════ HEADER ════════════════════════════════ -->
-<header>
-    <h1>Guillermo Segura Gonçalves</h1>
-    <p class="subtitle">> Técnico de Sistemas IT | Administrador de Sistemas (ASIR)</p>
-    <p class="tagline">Especialista en Microsoft 365 · Entornos Cloud · Infraestructura On-Premise</p>
-    <div class="contact-info">
-        📍 Logroño, La Rioja
-        <span>|</span>
-        ☎ <a href="tel:+34608057217">608 057 217</a>
-        <span>|</span>
-        ✉ <a href="/cdn-cgi/l/email-protection#80e7f5e9ecece5f2edeff3b6b2b5c0e7ede1e9ecaee3efed"><span class="__cf_email__" data-cfemail="107765797c7c75627d7f6326222550777d71797c3e737f7d">[email&#160;protected]</span></a>
-        <span>|</span>
-        🔗 <a href="https://linkedin.com/in/guillermoseguragonçalves" target="_blank">LinkedIn</a>
-        <span>|</span>
-        🌐 <a href="https://guillermo625-segura.github.io" target="_blank">Portfolio</a>
-    </div>
-</header>
+<nav>
+  <div class="nav-logo">GS<span>.</span></div>
+  <div class="nav-links">
+    <a href="#perfil">Perfil</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#stack">Stack</a>
+    <a href="#certificaciones">Certs</a>
+  </div>
+</nav>
 
-<div class="container">
+<div class="page">
 
-<!-- ════════════════════════════════ PERFIL ════════════════════════════════ -->
+<!-- ── HERO ── -->
 <section id="perfil">
-    <h2>👤 Perfil Profesional</h2>
-    <div class="perfil-text">
-        <p>Técnico de Sistemas con sólida experiencia en soporte técnico y administración de plataformas IT. Especializado en el despliegue de entornos Cloud, sistemas Windows/Linux y virtualización con una visión integral de la infraestructura IT.</p>
-        <p>Aporto proactividad, capacidad analítica para la resolución de incidencias y un firme compromiso con la continuidad del servicio. Mi trayectoria previa como Jefe de Tráfico me aporta una alta capacidad para la resolución de problemas bajo presión y organización de activos. Carné de conducir con vehículo propio.</p>
-    </div>
+  <div class="hero-tag">disponible · Logroño, La Rioja</div>
+  <h1 class="hero-name">Guillermo<br><span>Segura Gonçalves</span></h1>
+  <p class="hero-role">Técnico de Sistemas IT &nbsp;·&nbsp; Soporte L1/L2 &nbsp;·&nbsp; Administración de Sistemas &nbsp;·&nbsp; Redes</p>
+  <p class="hero-bio">
+    Técnico IT especializado en soporte técnico, administración de sistemas y entornos de virtualización VMware. 
+    Con experiencia en la gestión del ecosistema Microsoft 365 / Entra ID, seguridad perimetral 
+    (Sophos, SonicWall) y soluciones de backup NAKIVO. Enfocado en la eficiencia operativa, 
+    la resolución ágil de incidencias y la continuidad del negocio. Carné B y vehículo propio.
+  </p>
+  <div class="hero-contacts">
+    <a class="contact-pill" href="tel:+34608057217"><span class="dot"></span>608 057 217</a>
+    <a class="contact-pill" href="mailto:guillermos625@gmail.com"><span class="dot"></span>guillermos625@gmail.com</a>
+    <a class="contact-pill" href="https://linkedin.com/in/guillermoseguragonçalves" target="_blank"><span class="dot"></span>LinkedIn</a>
+    <a class="contact-pill" href="https://guillermo625-segura.github.io" target="_blank"><span class="dot"></span>Portfolio</a>
+  </div>
 </section>
 
-<!-- ═══════════════════════════ PROYECTOS PERSONALES ═══════════════════════ -->
+<!-- ── PROYECTOS ── -->
 <section id="proyectos">
-    <h2>🧪 Proyectos & Iniciativas</h2>
-    <div class="projects-grid">
+  <p class="sec-label">proyectos &amp; iniciativas</p>
+  <h2 class="sec-title">Trabajo real.<br>Problemas reales.</h2>
 
-        <!-- Exchange Server -->
-        <div class="project-card">
-            <span class="badge-new">Nuevo</span>
-            <div class="card-icon">📬</div>
-            <h3>Servidor de Correo On-Premise con Exchange Server 2019</h3>
-            <p>Despliegue completo de infraestructura de correo empresarial desde cero en entorno local, enfrentando los retos reales de una instalación en producción.</p>
-            <ul class="challenge-list">
-                <li>🛑 <strong>NetBIOS vs FQDN:</strong> Sincronización de identidades en AD y DNS para resolver discrepancias de nombres.</li>
-                <li>🛠 <strong>Topología y Catálogo Global:</strong> Diagnóstico de servicios que no arrancaban por dependencias con AD.</li>
-                <li>📧 <strong>Flujo de correo y conectores:</strong> Configuración manual de Send Connectors y reenviadores DNS.</li>
-                <li>💻 <strong>Back Pressure:</strong> Ajuste de EdgeTransport.exe.config para estabilizar el flujo con RAM limitada.</li>
-            </ul>
-            <div class="tag-list">
-                <span class="tag">Exchange Server 2019</span>
-                <span class="tag">Windows Server 2019</span>
-                <span class="tag">Active Directory</span>
-                <span class="tag">DNS</span>
-                <span class="tag">Troubleshooting</span>
-            </div>
+  <div class="proj-grid">
+
+    <!-- 1. vCenter upgrade -->
+    <div class="card">
+      <div class="card-bar bar-blue"></div>
+      <div class="card-body">
+        <div class="card-head">
+          <div class="card-ico ico-blue">⚡</div>
+          <div class="card-head-text">
+            <span class="card-badge badge-prod">Producción · Encore-Lab</span>
+            <p class="card-title">Upgrade y reconstrucción de vCenter 6.7 → 7</p>
+          </div>
         </div>
-
-        <!-- Wazuh / Docker -->
-        <div class="project-card">
-            <span class="badge-new">Nuevo</span>
-            <div class="card-icon">🛡️</div>
-            <h3>Plataforma de Monitorización y Detección de Anomalías con Wazuh</h3>
-            <p>Despliegue de un stack de seguridad SIEM/XDR completo mediante Docker para la detección de amenazas, análisis de logs y respuesta ante incidentes.</p>
-            <ul class="challenge-list">
-                <li>🐳 <strong>Despliegue Docker:</strong> Orquestación de contenedores para Wazuh Manager, Indexer y Dashboard.</li>
-                <li>🔍 <strong>Detección de anomalías:</strong> Configuración de reglas y alertas para identificar comportamientos sospechosos.</li>
-                <li>📊 <strong>Dashboards:</strong> Visualización de eventos de seguridad en tiempo real.</li>
-                <li>🔗 <strong>Integración de agentes:</strong> Conexión de endpoints Windows/Linux al servidor central.</li>
-            </ul>
-            <div class="tag-list">
-                <span class="tag">Wazuh</span>
-                <span class="tag">Docker</span>
-                <span class="tag">SIEM</span>
-                <span class="tag">Ciberseguridad</span>
-                <span class="tag">Linux</span>
-            </div>
+        <div class="situation">
+          <p class="lbl">Situación</p>
+          El vCenter existente en versión 6.7 había dejado de funcionar correctamente. Las VMs no respondían a las políticas de red y la gestión de recursos era inestable — bloqueante para el equipo.
         </div>
-
-        <!-- Copilot Studio -->
-        <div class="project-card">
-            <div class="card-icon">🤖</div>
-            <h3>Agente IA sobre SharePoint con Microsoft Copilot Studio</h3>
-            <p>Propuesta e implementación de un agente conversacional corporativo orientado a facilitar el acceso al conocimiento interno almacenado en SharePoint, reduciendo la fricción para localizar documentación en entornos con grandes volúmenes de contenido.</p>
-            <ul class="challenge-list">
-                <li>💬 <strong>Interfaz de lenguaje natural:</strong> El agente permite consultar contenidos del SharePoint corporativo mediante prompts simples, sin necesidad de navegar manualmente.</li>
-                <li>🔗 <strong>Integración con M365:</strong> Configuración de conectores y fuentes de conocimiento en Copilot Studio apuntando a sitios y bibliotecas de SharePoint.</li>
-                <li>🏢 <strong>Contexto empresarial:</strong> Iniciativa propuesta en entorno corporativo de gran organización, pendiente de aprobación presupuestaria para implantación definitiva.</li>
-            </ul>
-            <div class="tag-list">
-                <span class="tag">Copilot Studio</span>
-                <span class="tag">Microsoft 365</span>
-                <span class="tag">SharePoint</span>
-                <span class="tag">IA Generativa</span>
-                <span class="tag">Automatización</span>
-            </div>
+        <div class="actions">
+          <div class="action-item"><strong>Diagnóstico:</strong> causa raíz en configuración corrupta de vSphere y conflictos de red en el entorno 6.7.</div>
+          <div class="action-item"><strong>Upgrade a vCenter 7:</strong> migración planificada desde 6.7, actualización de hosts ESXi y compatibilidad de hardware validada.</div>
+          <div class="action-item"><strong>Reconfiguración de red:</strong> VLANs por rol, portgroups y conectividad VM-host verificada en el nuevo entorno.</div>
+          <div class="action-item"><strong>Migración de VMs:</strong> traslado sin pérdida de datos con ajuste de CPU, RAM y almacenamiento por cluster.</div>
         </div>
-
-        <!-- Claude Code / Fichaje -->
-        <div class="project-card">
-            <div class="card-icon">⏱️</div>
-            <h3>Aplicación de Imputación de Tareas y Fichaje con IA</h3>
-            <p>Desarrollo de una herramienta interna para simplificar el registro de jornada y la imputación de tareas, sustituyendo el proceso manual sobre Excel por una interfaz web más ágil e intuitiva.</p>
-            <ul class="challenge-list">
-                <li>🛠 <strong>Desarrollo con Claude Code:</strong> Aplicación generada con asistencia de IA, desplegable como app web local (localhost) o integrable en el entorno corporativo.</li>
-                <li>📋 <strong>Sustitución del Excel:</strong> Automatización del volcado de datos que antes requería entrada manual en hojas de cálculo compartidas.</li>
-                <li>🏢 <strong>Contexto empresarial:</strong> Prototipo funcional presentado internamente en organización de gran tamaño, sujeto a aprobación de presupuesto para su despliegue formal.</li>
-            </ul>
-            <div class="tag-list">
-                <span class="tag">Claude Code</span>
-                <span class="tag">IA aplicada</span>
-                <span class="tag">Desarrollo web</span>
-                <span class="tag">Automatización</span>
-                <span class="tag">Productividad IT</span>
-            </div>
+        <div class="result">
+          <p class="lbl">Resultado</p>
+          Entorno de virtualización en v7 completamente operativo. Gestión centralizada restaurada y rendimiento mejorado respecto al entorno anterior.
         </div>
-
+        <div class="tags">
+          <span class="tag">VMware vCenter 7</span><span class="tag">vSphere</span><span class="tag">ESXi</span><span class="tag">VLAN</span><span class="tag">Upgrade</span><span class="tag">Virtualización</span>
+        </div>
+      </div>
     </div>
+
+    <!-- 2. Firewall -->
+    <div class="card">
+      <div class="card-bar bar-red"></div>
+      <div class="card-body">
+        <div class="card-head">
+          <div class="card-ico ico-red">🛡️</div>
+          <div class="card-head-text">
+            <span class="card-badge badge-prod">Producción · Encore-Lab</span>
+            <p class="card-title">Sustitución de firewall perimetral</p>
+          </div>
+        </div>
+        <div class="situation">
+          <p class="lbl">Situación</p>
+          El firewall antiguo presentaba limitaciones de rendimiento y brechas en las reglas de acceso. No cubría las necesidades de seguridad actuales de la organización.
+        </div>
+        <div class="actions">
+          <div class="action-item"><strong>Auditoría del dispositivo:</strong> volcado y revisión de reglas, políticas VPN y zonas de seguridad existentes.</div>
+          <div class="action-item"><strong>Despliegue del nuevo hardware:</strong> instalación física, configuración inicial y migración de políticas.</div>
+          <div class="action-item"><strong>Reglas LAN/WAN/DMZ:</strong> definición de zonas, acceso por VLAN y políticas VPN IPSec.</div>
+          <div class="action-item"><strong>Hardening:</strong> MFA en administración, logs de auditoría y revisión de puertos expuestos.</div>
+        </div>
+        <div class="result">
+          <p class="lbl">Resultado</p>
+          Seguridad perimetral renovada con cobertura completa de reglas y acceso VPN estable para usuarios remotos.
+        </div>
+        <div class="tags">
+          <span class="tag">Sophos</span><span class="tag">SonicWall</span><span class="tag">VPN IPSec</span><span class="tag">VLAN</span><span class="tag">Hardening</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. OUs AD -->
+    <div class="card">
+      <div class="card-bar bar-amber"></div>
+      <div class="card-body">
+        <div class="card-head">
+          <div class="card-ico ico-amber">🗂️</div>
+          <div class="card-head-text">
+            <span class="card-badge badge-prod">Producción · Encore-Lab</span>
+            <p class="card-title">Reestructuración de Active Directory: OUs, GPOs y permisos</p>
+          </div>
+        </div>
+        <div class="situation">
+          <p class="lbl">Situación</p>
+          La estructura de OUs era plana y sin orden lógico. Las GPOs no aplicaban correctamente y los permisos de usuario eran inconsistentes, generando conflictos de herencia.
+        </div>
+        <div class="actions">
+          <div class="action-item"><strong>Auditoría del directorio:</strong> inventario de usuarios, grupos y OUs para mapear el estado real.</div>
+          <div class="action-item"><strong>Diseño de jerarquía:</strong> estructura de OUs por departamento con herencia limpia de GPOs.</div>
+          <div class="action-item"><strong>Asignación de permisos:</strong> cada usuario vinculado a su OU con mínimo privilegio necesario (RBAC).</div>
+          <div class="action-item"><strong>Validación:</strong> comprobación con <code>gpresult</code> y pruebas por perfil de usuario.</div>
+        </div>
+        <div class="result">
+          <p class="lbl">Resultado</p>
+          GPOs aplicando correctamente en toda la organización. Gestión predecible y auditable, base limpia para futuros cambios.
+        </div>
+        <div class="tags">
+          <span class="tag">Active Directory</span><span class="tag">GPO</span><span class="tag">Entra ID</span><span class="tag">RBAC</span><span class="tag">PowerShell</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. IIS -->
+    <div class="card">
+      <div class="card-bar bar-green"></div>
+      <div class="card-body">
+        <div class="card-head">
+          <div class="card-ico ico-green">🌐</div>
+          <div class="card-head-text">
+            <span class="card-badge badge-prod">Producción · Encore-Lab</span>
+            <p class="card-title">Acceso externo seguro en IIS vía IP pública</p>
+          </div>
+        </div>
+        <div class="situation">
+          <p class="lbl">Situación</p>
+          El servicio IIS solo era accesible desde la red interna. Se necesitaba exponer el servicio a usuarios externos de forma segura sin comprometer la red corporativa.
+        </div>
+        <div class="actions">
+          <div class="action-item"><strong>Diagnóstico IIS:</strong> revisión de bindings, puertos y restricciones de IP configuradas.</div>
+          <div class="action-item"><strong>Regla de IP pública:</strong> habilitación del binding con la IP pública y filtrado de IPs permitidas.</div>
+          <div class="action-item"><strong>Apertura en firewall:</strong> regla de entrada específica para el puerto del servicio con restricción de origen.</div>
+          <div class="action-item"><strong>Validación:</strong> pruebas de conectividad externa y revisión de logs de acceso IIS.</div>
+        </div>
+        <div class="result">
+          <p class="lbl">Resultado</p>
+          Acceso externo funcional para usuarios fuera de la red corporativa, con trazabilidad completa en logs de IIS.
+        </div>
+        <div class="tags">
+          <span class="tag">IIS</span><span class="tag">Windows Server</span><span class="tag">IP pública</span><span class="tag">Firewall</span><span class="tag">Networking</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Exchange -->
+    <div class="card">
+      <div class="card-bar bar-blue"></div>
+      <div class="card-body">
+        <div class="card-head">
+          <div class="card-ico ico-blue">📬</div>
+          <div class="card-head-text">
+            <span class="card-badge badge-lab">Laboratorio propio</span>
+            <p class="card-title">Servidor de correo on-premise con Exchange Server 2019</p>
+          </div>
+        </div>
+        <div class="situation">
+          <p class="lbl">Situación</p>
+          Despliegue completo de infraestructura de correo empresarial desde cero en entorno local, enfrentando los retos reales de una instalación en producción.
+        </div>
+        <div class="actions">
+          <div class="action-item"><strong>NetBIOS vs FQDN:</strong> sincronización de identidades en AD y DNS para resolver discrepancias de nombres.</div>
+          <div class="action-item"><strong>Topología y Catálogo Global:</strong> diagnóstico de servicios que no arrancaban por dependencias con AD.</div>
+          <div class="action-item"><strong>Flujo de correo:</strong> configuración manual de Send Connectors y reenviadores DNS.</div>
+          <div class="action-item"><strong>Back Pressure:</strong> ajuste de EdgeTransport.exe.config para estabilizar el flujo con RAM limitada.</div>
+        </div>
+        <div class="result">
+          <p class="lbl">Resultado</p>
+          Infraestructura de correo on-premise completamente funcional con flujo entrante y saliente verificado.
+        </div>
+        <div class="tags">
+          <span class="tag">Exchange 2019</span><span class="tag">Active Directory</span><span class="tag">DNS</span><span class="tag">Windows Server 2019</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Wazuh -->
+    <div class="card">
+      <div class="card-bar bar-red"></div>
+      <div class="card-body">
+        <div class="card-head">
+          <div class="card-ico ico-red">🔍</div>
+          <div class="card-head-text">
+            <span class="card-badge badge-lab">Laboratorio propio</span>
+            <p class="card-title">Plataforma SIEM/XDR con Wazuh</p>
+          </div>
+        </div>
+        <div class="situation">
+          <p class="lbl">Situación</p>
+          Necesidad de un entorno de detección de amenazas y análisis de logs centralizado para practicar respuesta ante incidentes en entorno controlado.
+        </div>
+        <div class="actions">
+          <div class="action-item"><strong>Despliegue Docker:</strong> orquestación de Wazuh Manager, Indexer y Dashboard en contenedores.</div>
+          <div class="action-item"><strong>Detección de anomalías:</strong> configuración de reglas y alertas para comportamientos sospechosos.</div>
+          <div class="action-item"><strong>Dashboards:</strong> visualización de eventos de seguridad en tiempo real.</div>
+          <div class="action-item"><strong>Integración de agentes:</strong> endpoints Windows/Linux conectados al servidor central.</div>
+        </div>
+        <div class="result">
+          <p class="lbl">Resultado</p>
+          Stack SIEM/XDR operativo con visibilidad completa de eventos y capacidad de respuesta ante incidentes simulados.
+        </div>
+        <div class="tags">
+          <span class="tag">Wazuh</span><span class="tag">Docker</span><span class="tag">SIEM</span><span class="tag">Linux</span><span class="tag">Ciberseguridad</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. Copilot Studio — UNIR -->
+    <div class="card">
+      <div class="card-bar bar-purple"></div>
+      <div class="card-body">
+        <div class="card-head">
+          <div class="card-ico ico-purple">🤖</div>
+          <div class="card-head-text">
+            <span class="card-badge badge-corp">Iniciativa · UNIR</span>
+            <p class="card-title">Agente IA sobre SharePoint con Microsoft Copilot Studio</p>
+          </div>
+        </div>
+        <div class="situation">
+          <p class="lbl">Situación</p>
+          El volumen de documentación interna en SharePoint generaba fricción a los usuarios para localizar contenido. Propuesta de agente conversacional para resolver consultas sin navegación manual.
+        </div>
+        <div class="actions">
+          <div class="action-item"><strong>Interfaz de lenguaje natural:</strong> el agente consulta SharePoint mediante prompts simples, sin navegación manual.</div>
+          <div class="action-item"><strong>Integración M365:</strong> conectores y fuentes de conocimiento apuntando a sitios y bibliotecas de SharePoint.</div>
+          <div class="action-item"><strong>Propuesta corporativa:</strong> iniciativa presentada en UNIR, pendiente de aprobación presupuestaria para despliegue definitivo.</div>
+          <div class="action-item"><strong>Documentación técnica:</strong> especificación funcional y estimación de impacto elaborada para la dirección IT.</div>
+        </div>
+        <div class="result">
+          <p class="lbl">Resultado</p>
+          Prototipo funcional validado internamente. Propuesta aceptada a nivel técnico, en fase de aprobación de presupuesto.
+        </div>
+        <div class="tags">
+          <span class="tag">Copilot Studio</span><span class="tag">Microsoft 365</span><span class="tag">SharePoint</span><span class="tag">IA aplicada</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. App fichaje -->
+    <div class="card">
+      <div class="card-bar bar-amber"></div>
+      <div class="card-body">
+        <div class="card-head">
+          <div class="card-ico ico-amber">⏱️</div>
+          <div class="card-head-text">
+            <span class="card-badge badge-corp">Iniciativa · UNIR</span>
+            <p class="card-title">App de imputación de tareas y fichaje con IA</p>
+          </div>
+        </div>
+        <div class="situation">
+          <p class="lbl">Situación</p>
+          El registro de jornada y la imputación de tareas se realizaba manualmente sobre Excel, generando errores y tiempo perdido. Se propuso una herramienta web más ágil.
+        </div>
+        <div class="actions">
+          <div class="action-item"><strong>Desarrollo con Claude Code:</strong> aplicación generada con asistencia de IA, desplegable como app web local o en entorno corporativo.</div>
+          <div class="action-item"><strong>Sustitución del Excel:</strong> automatización del volcado de datos que antes requería entrada manual.</div>
+          <div class="action-item"><strong>Presentación interna:</strong> prototipo funcional presentado a la dirección IT de UNIR.</div>
+          <div class="action-item"><strong>Documentación:</strong> manual de usuario y especificación técnica para evaluación por parte del equipo.</div>
+        </div>
+        <div class="result">
+          <p class="lbl">Resultado</p>
+          Prototipo funcional presentado. Solución valorada positivamente, pendiente de aprobación de presupuesto para despliegue formal.
+        </div>
+        <div class="tags">
+          <span class="tag">Claude Code</span><span class="tag">IA aplicada</span><span class="tag">Desarrollo web</span><span class="tag">Automatización</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<!-- ═══════════════════════════════ EXPERIENCIA ════════════════════════════ -->
-<section id="experiencia">
-    <h2>💼 Experiencia Profesional</h2>
-
-    <div class="job-item">
-        <h3>Técnico de Sistemas IT (FCT) — Encore-Lab (GrupoIEI)</h3>
-        <div class="job-meta">Ene. 2026 – Actualidad</div>
-        <ul>
-            <li>Administración de sistemas Windows Server 2019: AD DS, GPOs, DNS/DHCP y gestión de usuarios.</li>
-            <li>Soporte L1/L2: resolución de incidencias de red, VPN, hardware/software y dispositivos corporativos.</li>
-            <li>VMware vCenter/vSphere: clonación de VMs, reconfiguración de red, gestión de recursos de CPU y almacenamiento.</li>
-            <li>Backups con NAKIVO sobre NAS Synology: políticas de retención, recuperación de espacio y resolución de fallos de transporter.</li>
-        </ul>
+<!-- ── STACK TÉCNICO ── -->
+<section id="stack">
+  <p class="sec-label">stack técnico</p>
+  <h2 class="sec-title">Herramientas<br>del oficio.</h2>
+  <div class="stack-grid">
+    <div class="stack-card">
+      <p class="stack-cat cat-blue">Sistemas &amp; Virtualización</p>
+      <div class="stack-items">
+        <span class="stack-item">Windows Server 2019</span>
+        <span class="stack-item">Active Directory / GPO</span>
+        <span class="stack-item">VMware vCenter 7 / vSphere</span>
+        <span class="stack-item">Linux — Ubuntu / CentOS</span>
+        <span class="stack-item">IIS</span>
+      </div>
     </div>
-
-    <div class="job-item">
-        <h3>Técnico de Atención al Profesor — UNIR</h3>
-        <div class="job-meta">2023 – Actualidad</div>
-        <ul>
-            <li>Soporte técnico remoto y gestión de plataformas e-learning (Moodle, Canvas).</li>
-            <li>Administración de aplicaciones y configuración de software para usuarios académicos.</li>
-        </ul>
+    <div class="stack-card">
+      <p class="stack-cat cat-red">Redes &amp; Seguridad</p>
+      <div class="stack-items">
+        <span class="stack-item">SonicWall · Sophos</span>
+        <span class="stack-item">VPN IPSec</span>
+        <span class="stack-item">DNS · DHCP · VLANs</span>
+        <span class="stack-item">TCP/IP · Wi-Fi corporativo</span>
+        <span class="stack-item">Wazuh / SIEM · Ciberseg. OT</span>
+      </div>
     </div>
-
-    <div class="job-item">
-        <h3>Jefe de Tráfico — Transportes Garlez</h3>
-        <div class="job-meta">2022 – 2023</div>
-        <ul>
-            <li>Coordinación logística y resolución de incidencias operativas en entornos de alta presión.</li>
-            <li>Gestión de recursos y comunicación directa con clientes y equipos de trabajo.</li>
-        </ul>
+    <div class="stack-card">
+      <p class="stack-cat cat-green">Cloud &amp; Microsoft 365</p>
+      <div class="stack-items">
+        <span class="stack-item">Microsoft 365 / Entra ID</span>
+        <span class="stack-item">Azure AZ-900</span>
+        <span class="stack-item">Exchange Server 2019</span>
+        <span class="stack-item">Copilot Studio</span>
+        <span class="stack-item">IONOS Cloud</span>
+      </div>
     </div>
-
-    <div class="job-item">
-        <h3>Técnico de Marketing — INDEX Técnicas Expansivas</h3>
-        <div class="job-meta">2021 – 2022</div>
-        <ul>
-            <li>Gestión de campañas de marketing y atención comercial.</li>
-        </ul>
+    <div class="stack-card">
+      <p class="stack-cat cat-amber">Backup, Data &amp; Automatización</p>
+      <div class="stack-items">
+        <span class="stack-item">NAKIVO · Synology NAS</span>
+        <span class="stack-item">MariaDB / SQL Server</span>
+        <span class="stack-item">PowerShell · Bash</span>
+        <span class="stack-item">Docker</span>
+        <span class="stack-item">Jira Service Management</span>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- ════════════════════════════════ FORMACIÓN ═════════════════════════════ -->
-<section id="formacion">
-    <h2>🎓 Formación Académica & Certificaciones</h2>
-
-    <div class="edu-featured">
-        <h3>Grado Superior ASIR — Administración de Sistemas Informáticos y Redes <span class="badge-curso">EN CURSO</span></h3>
-        <div class="edu-detail">UNIR – Logroño, La Rioja &nbsp;|&nbsp; 2024 – Actualidad</div>
-        <ul>
-            <li>💻 Administración Integral de Microsoft 365</li>
-            <li>☁️ Fundamentos de Microsoft Azure (AZ-900)</li>
-            <li>🔐 Ciberseguridad Avanzada en Entornos OT (Tecnologías de la Operación)</li>
-        </ul>
+<!-- ── CERTIFICACIONES ── -->
+<section id="certificaciones">
+  <p class="sec-label">certificaciones activas</p>
+  <h2 class="sec-title">Formación<br>verificable.</h2>
+  <div class="cert-grid">
+    <div class="cert-card">
+      <span class="cert-dot" style="background:var(--blue)"></span>
+      <span class="cert-text">Microsoft Applied Skills: AD Domain Services</span>
+      <span class="cert-year">2026</span>
     </div>
-
-    <div class="edu-other">
-        <div class="edu-item">
-            <strong>G.S. Transporte y Logística</strong>
-            <span>IES Comercio, Logroño · 2020</span>
-        </div>
-        <div class="edu-item">
-            <strong>G.S. Comercio Internacional</strong>
-            <span>IES Comercio, Logroño · 2019</span>
-        </div>
-        <div class="edu-item">
-            <strong>G.M. Comercio y Marketing</strong>
-            <span>IES Comercio, Logroño · 2017</span>
-        </div>
+    <div class="cert-card">
+      <span class="cert-dot" style="background:var(--blue)"></span>
+      <span class="cert-text">Azure Fundamentals AZ-900</span>
+      <span class="cert-year">2026</span>
     </div>
+    <div class="cert-card">
+      <span class="cert-dot" style="background:var(--green)"></span>
+      <span class="cert-text">Administración Integral Microsoft 365</span>
+      <span class="cert-year">2026</span>
+    </div>
+    <div class="cert-card">
+      <span class="cert-dot" style="background:var(--amber)"></span>
+      <span class="cert-text">Hardening de Active Directory</span>
+      <span class="cert-year">2026</span>
+    </div>
+    <div class="cert-card">
+      <span class="cert-dot" style="background:var(--red)"></span>
+      <span class="cert-text">Ciberseguridad Avanzada en Entornos OT</span>
+      <span class="cert-year">2025</span>
+    </div>
+    <div class="cert-card">
+      <span class="cert-dot" style="background:var(--purple)"></span>
+      <span class="cert-text">G.S. ASIR — UNIR</span>
+      <span class="cert-year">2024 – 2026</span>
+    </div>
+  </div>
 </section>
-
-<!-- ════════════════════════════════ SKILLS ════════════════════════════════ -->
-<section id="skills">
-    <h2>🛠 Stack Técnico</h2>
-    <div class="skills-grid">
-        <div class="skill-group">
-            <h3>Sistemas & Virtualización</h3>
-            <span class="badge">Windows Server 2019</span>
-            <span class="badge">Active Directory</span>
-            <span class="badge">VMware vCenter/vSphere</span>
-            <span class="badge">Linux / CentOS / Ubuntu</span>
-        </div>
-        <div class="skill-group">
-            <h3>Redes & Seguridad</h3>
-            <span class="badge">SonicWall (IPSec VPN)</span>
-            <span class="badge">DNS · DHCP · VLANs</span>
-            <span class="badge">Wazuh / SIEM</span>
-            <span class="badge">Ciberseguridad OT</span>
-        </div>
-        <div class="skill-group">
-            <h3>Cloud & M365</h3>
-            <span class="badge">Microsoft 365</span>
-            <span class="badge">Azure AZ-900</span>
-            <span class="badge">Exchange Server 2019</span>
-            <span class="badge">Google Workspace</span>
-            <span class="badge">IONOS Cloud</span>
-        </div>
-        <div class="skill-group">
-            <h3>Backup, Data & DevOps</h3>
-            <span class="badge">NAKIVO</span>
-            <span class="badge">Synology NAS</span>
-            <span class="badge">MariaDB / SQL</span>
-            <span class="badge">Docker</span>
-            <span class="badge">Jira Service Management</span>
-        </div>
-    </div>
-</section>
-
-</div><!-- /container -->
 
 <footer>
-   
+  <p>Guillermo Segura Gonçalves &nbsp;·&nbsp; <span>Logroño, La Rioja</span> &nbsp;·&nbsp; guillermos625@gmail.com</p>
+</footer>
+
+</div>
+</body>
+</html>
