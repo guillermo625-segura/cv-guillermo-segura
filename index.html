@@ -104,7 +104,9 @@ section{padding:4rem 0 0}
 .card:nth-child(1){animation-delay:.05s}.card:nth-child(2){animation-delay:.1s}
 .card:nth-child(3){animation-delay:.15s}.card:nth-child(4){animation-delay:.2s}
 .card:nth-child(5){animation-delay:.25s}.card:nth-child(6){animation-delay:.3s}
-.card:nth-child(7){animation-delay:.35s}
+.card:nth-child(7){animation-delay:.35s}.card:nth-child(8){animation-delay:.4s}
+.card:nth-child(9){animation-delay:.45s}.card:nth-child(10){animation-delay:.5s}
+.card:nth-child(11){animation-delay:.55s}
 
 /* accent bar */
 .card-bar{height:2px;width:100%;flex-shrink:0}
@@ -494,6 +496,99 @@ footer span{color:var(--blue)}
       </div>
     </div>
 
+    <!-- 9. Graylog / Syslog -->
+    <div class="card">
+      <div class="card-bar bar-green"></div>
+      <div class="card-body">
+        <div class="card-head">
+          <div class="card-ico ico-green">📊</div>
+          <div class="card-head-text">
+            <span class="card-badge badge-prod">Producción · Construal S.L</span>
+            <p class="card-title">Despliegue de logging centralizado con Graylog</p>
+          </div>
+        </div>
+        <div class="situation">
+          <p class="lbl">Situación</p>
+          Los logs de los distintos sistemas estaban dispersos entre servidores, sin un punto centralizado de consulta, dificultando la detección temprana de incidencias y el análisis forense.
+        </div>
+        <div class="actions">
+          <div class="action-item"><strong>Diagnóstico de fuentes:</strong> identificación de servicios y equipos susceptibles de enviar logs vía Syslog.</div>
+          <div class="action-item"><strong>Despliegue de Graylog:</strong> instalación y configuración del stack para ingesta centralizada.</div>
+          <div class="action-item"><strong>Inputs Syslog:</strong> recepción y parseo de logs desde servidores y dispositivos de red.</div>
+          <div class="action-item"><strong>Dashboards y alertas:</strong> paneles de visualización y reglas de alerta sobre eventos relevantes.</div>
+        </div>
+        <div class="result">
+          <p class="lbl">Resultado</p>
+          Punto único de visibilidad sobre los logs de la infraestructura, con búsqueda centralizada y detección más ágil de anomalías.
+        </div>
+        <div class="tags">
+          <span class="tag">Graylog</span><span class="tag">Syslog</span><span class="tag">Centralización de logs</span><span class="tag">Monitorización</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10. LDAP SSO -->
+    <div class="card">
+      <div class="card-bar bar-purple"></div>
+      <div class="card-body">
+        <div class="card-head">
+          <div class="card-ico ico-purple">🔑</div>
+          <div class="card-head-text">
+            <span class="card-badge badge-prod">Producción · Construal S.L</span>
+            <p class="card-title">Integración de LDAP para autenticación única (SSO) multi-servicio</p>
+          </div>
+        </div>
+        <div class="situation">
+          <p class="lbl">Situación</p>
+          Cada servicio de la infraestructura (iDRAC, iLO, GLPI, Zabbix, NAS Synology, VMware ESXi/vSphere) mantenía usuarios locales independientes, multiplicando credenciales y dificultando la gestión de accesos.
+        </div>
+        <div class="actions">
+          <div class="action-item"><strong>Auditoría de servicios:</strong> inventario de plataformas con autenticación local susceptibles de integrarse con LDAP.</div>
+          <div class="action-item"><strong>Integración LDAP con AD:</strong> configuración de cada servicio (iDRAC, iLO, GLPI, Zabbix, Synology, ESXi/vSphere) contra el LDAP de Active Directory.</div>
+          <div class="action-item"><strong>Autenticación centralizada:</strong> acceso con el usuario administrador de dominio en todos los servicios integrados.</div>
+          <div class="action-item"><strong>Validación de accesos:</strong> pruebas de login y revisión de permisos por servicio tras la migración.</div>
+        </div>
+        <div class="result">
+          <p class="lbl">Resultado</p>
+          Autenticación única (SSO) para el administrador en todos los servicios críticos, reduciendo credenciales a mantener y mejorando la trazabilidad de accesos.
+        </div>
+        <div class="tags">
+          <span class="tag">LDAP</span><span class="tag">Active Directory</span><span class="tag">SSO</span><span class="tag">iDRAC / iLO</span><span class="tag">GLPI</span><span class="tag">Zabbix</span><span class="tag">VMware ESXi/vSphere</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11. Redundancia AD -->
+    <div class="card">
+      <div class="card-bar bar-blue"></div>
+      <div class="card-body">
+        <div class="card-head">
+          <div class="card-ico ico-blue">🔁</div>
+          <div class="card-head-text">
+            <span class="card-badge badge-prod">Producción · Construal S.L</span>
+            <p class="card-title">Redundancia del controlador de dominio (Active Directory)</p>
+          </div>
+        </div>
+        <div class="situation">
+          <p class="lbl">Situación</p>
+          La infraestructura dependía de un único controlador de dominio, representando un punto único de fallo para la autenticación y resolución de nombres de toda la organización.
+        </div>
+        <div class="actions">
+          <div class="action-item"><strong>Diagnóstico de riesgo:</strong> evaluación del impacto de una caída del DC único sobre autenticación, DNS y GPOs.</div>
+          <div class="action-item"><strong>Despliegue del segundo DC:</strong> promoción de un nuevo servidor como controlador de dominio adicional.</div>
+          <div class="action-item"><strong>Replicación de AD:</strong> verificación de la replicación de directorio, DNS integrado y SYSVOL entre ambos DCs.</div>
+          <div class="action-item"><strong>Pruebas de failover:</strong> simulación de caída de un DC para validar continuidad del servicio.</div>
+        </div>
+        <div class="result">
+          <p class="lbl">Resultado</p>
+          Alta disponibilidad del servicio de directorio, con continuidad de autenticación y resolución de nombres garantizada ante el fallo de cualquiera de los dos controladores.
+        </div>
+        <div class="tags">
+          <span class="tag">Active Directory</span><span class="tag">Redundancia</span><span class="tag">Alta disponibilidad</span><span class="tag">DNS</span><span class="tag">SYSVOL</span>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -510,6 +605,7 @@ footer span{color:var(--blue)}
         <span class="stack-item">VMware vCenter 7 / vSphere</span>
         <span class="stack-item">Linux — Ubuntu / CentOS</span>
         <span class="stack-item">IIS</span>
+        <span class="stack-item">Redundancia AD (Multi-DC)</span>
       </div>
     </div>
     <div class="stack-card">
@@ -520,6 +616,7 @@ footer span{color:var(--blue)}
         <span class="stack-item">DNS · DHCP · VLANs</span>
         <span class="stack-item">TCP/IP · Wi-Fi corporativo</span>
         <span class="stack-item">Wazuh / SIEM · Ciberseg. OT</span>
+        <span class="stack-item">LDAP / SSO</span>
       </div>
     </div>
     <div class="stack-card">
@@ -540,6 +637,7 @@ footer span{color:var(--blue)}
         <span class="stack-item">PowerShell · Bash</span>
         <span class="stack-item">Docker</span>
         <span class="stack-item">Jira Service Management</span>
+        <span class="stack-item">Graylog / Syslog</span>
       </div>
     </div>
   </div>
